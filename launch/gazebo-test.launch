@@ -1,7 +1,7 @@
 <launch>
     <param name="robot_description" textfile="../urdf/tortoise-chassis.urdf" />
-    <!-- <include file="$(find gazebo_ros)/launch/empty_world.launch" /> -->
-    <include file="$(find gazebo_ros)/launch/willowgarage_world.launch" />
+    <include file="$(find gazebo_ros)/launch/empty_world.launch" />
+    <!-- <include file="$(find gazebo_ros)/launch/willowgarage_world.launch" /> -->
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
     <node name="map_server" pkg="map_server" type="map_server" args="../maps/willow.yaml" />
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model tortoise-chassis" />
